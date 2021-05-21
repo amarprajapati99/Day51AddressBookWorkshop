@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../Css/stylesheet.css" rel="stylesheet">
+    <title> ADDRESS BOOK FORM</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- UC1 - Address Book Form with Logo -->
+
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="../assets/logo.jpg" alt="">
+            <div>
+                <span class="add-text">ADDRESS</span><br>
+                <span class="add-text address-book">BOOK</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- UC2 - Address Book Form as a webpage using HTML, CSS and add a header element on
+          top of the UI having text as ‘Address Book’ and an image -->
+
+    <div id="formId" class="form-content">
+        <form class="form" action="#" onreset="resetForm()" onsubmit="saveForm(event)">
+            <div class="address-header">
+                <div class="address-header-content">PERSON ADDRESS FORM </div>
+                <a href="../pages/home.html"><img class="cancel-button" src="../assets/cancel.jpg"></a>
+            </div>
+
+            <br><br>
+            <div class="row-content">
+                <label class="label text" for="name">Full Name</label>
+                <input class="input" type="text" name="name" id="name" placeholder="Enter your full name here "
+                    required>
+                <error-output class="text-error" for="name"></error-output>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="number">Mobile Number</label>
+                <input class="input" type="phone number" name="mobile" id="mobile"
+                    placeholder="Enter your mobile number here " required>
+                <error-output class="number-error" for="mobile"></error-output>
+            </div>
+            <div class="row-content address-label">
+                <label class="label text" for="address">Address</label>
+                <textarea class="input address-text" type="text" name="address" id="address"
+                    placeholder="Enter your address here" required></textarea>
+            </div>
+            <div class="select-elements">
+                <div name="city" id="city" class="city">
+                    <label for="city" class="label text">City</label>
+                    <select class="select" name="city" id="city">
+                        <option value="" disabled selected hidden>Select City</option>
+                        <option value="Delhi">Lucknow</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Bangalore">Bangalore</option>
+                    </select>
+                </div>
+                <div name="state" id="state" class="state">
+                    <label for="state" class="label text">State</label>
+                    <select class="select" name="state" id="state">
+                        <option value="" disabled selected hidden>Select State</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="AndhraPradesh">Andhra Pradesh</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Gujarat">Gujarat</option>
+                    </select>
+                </div>
+                <div name="zip" id="zip" class="zip">
+                    <label for="zip" class="label text">Zip Code</label>
+                    <input class="select" type="zip code" name="zip" id="zip">
+                </div>
+            </div>
+            <div class="submit-reset">
+                <button type="submit" class="button submitButton" id="submitButton">Add</button>
+                <button type="button" onclick="resetForm()" class="resetButton button">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+        <script src="../js/addressBookForm.js"></script>
+        <script src="../js/addressBook.js"></script>
+</html>
+</body>
